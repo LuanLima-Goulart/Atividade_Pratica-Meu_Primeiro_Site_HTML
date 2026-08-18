@@ -1,5 +1,7 @@
 body {
     margin: 20px;
+    background-color: black;
+    color: white;
 }
 
 .tituloImagem {
@@ -15,11 +17,11 @@ body {
 }
 
 .nomeSite {
-    color: black;
+    color: white;
 }
 
 .nomeSite:hover {
-    color: darkblue;
+    color: purple;
 }
 
 .abas {
@@ -29,14 +31,15 @@ body {
 }
 
 .abas2 {
-    color: black;
+    color: white;
 }
 
 .abas2:hover {
-    color: darkblue;
+    color: purple;
 }
 
 .prod {
+    background-color: #23145b;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,6 +51,8 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 190px;
+    background-color: #23145b;
+    padding-bottom: 70px;
 }
 
 .imgProd {
@@ -55,19 +60,31 @@ body {
     height: 700px;
 }
 
+.mac11 {
+    background-color: #420024;
+    padding: 10px;
+}
+
+.mac22 {
+    background-color: #70264d;
+    padding: 10px;
+}
+
+.bomb11 {
+    background-color: #9e4d76;
+    padding: 10px;
+}
+
 .mac:hover {
-    width: 500px;
-    height: 800px;
+    transform: scale(1.15);
 }
 
 .mac2:hover {
-    width: 500px;
-    height: 800px;
+    transform: scale(1.15);
 }
 
 .bomb:hover {
-    width: 500px;
-    height: 800px;
+    transform: scale(1.15);
 }
 
 .imagemProduto {
