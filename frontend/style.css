@@ -4,6 +4,11 @@ body {
     color: white;
 }
 
+textarea {
+    max-width: 500px;
+    max-height: 200px;
+}
+
 .tituloImagem {
     display: flex;
     flex-direction: row;
