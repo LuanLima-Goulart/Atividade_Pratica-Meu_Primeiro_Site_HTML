@@ -1,0 +1,90 @@
+body {
+    margin: 20px;
+}
+
+.tituloImagem {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.ceoSex {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.nomeSite {
+    color: black;
+}
+
+.nomeSite:hover {
+    color: darkblue;
+}
+
+.abas {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.abas2 {
+    color: black;
+}
+
+.abas2:hover {
+    color: darkblue;
+}
+
+.prod {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 400px;
+}
+
+.prodImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 190px;
+}
+
+.imgProd {
+    width: 400px;
+    height: 700px;
+}
+
+.mac:hover {
+    width: 500px;
+    height: 800px;
+}
+
+.mac2:hover {
+    width: 500px;
+    height: 800px;
+}
+
+.bomb:hover {
+    width: 500px;
+    height: 800px;
+}
+
+.imagemProduto {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalheProd {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+p {
+    font-size: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
