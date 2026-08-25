@@ -148,5 +148,14 @@ html {
 
 .comentario-box p {
     margin-top: 5px;
+    margin-bottom: 0px;
     color: white;
+}
+
+.dataLayout {
+    font-size:40px;
+}
+
+.horaLayout {
+    font-size: 40px;
 }
