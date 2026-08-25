@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="../frontend/style.css">
+</head>
+
+<body>
+    <header>
+
+        <section>
+            <div class="tituloImagem">
+                <a class="nomeSite" href="inicial.html">
+                    <img class="ceoSex" src="assets/ceo_of_sex.webp" alt="Ceo of Sex">
+                </a>
+                <a class="nomeSite" href="inicial.html">
+                    <h1><strong>Feedbacks</strong></h1>
+                </a>
+            </div>
+            <h2>Comentários dos nossos clientes!😍😍😍</h2>
+        </section>
+        <nav class="abas">
+            <h3>|</h3>
+            <a class="abas2" href="produtos.html">
+                <h3>Produtos</h3>
+            </a>
+            <h3>|</h3>
+            <a class="abas2" href="contatos.html">
+                <h3>Contatos</h3>
+            </a>
+            <h3>|</h3>
+            <a class="abas2" href="feedback.html">
+                <h3>Feedbacks</h3>
+            </a>
+            <h3>|</h3>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <p>Escreva um feedback do produto!😊😊😊</p>
+        <br>
+        <img width="1649" src="assets/Gumball12.jpg" alt="Gumball com uma doze">
+        <br>
+        <form>
+            <section class="section">
+                <label for="nome">Nome</label>
+                <br>
+                <input id="nome" type="text" placeholder="Escreva seu nome" required>
+                <br>
+                <label for="email">E-mail</label>
+                <br>
+                <input id="email" type="email" placeholder="Escreva seu E-mail" required>
+                <br>
+                <label for="senha">Senha: </label>
+                <br>
+                <input id="senha" type="password" placeholder="Escreva sua senha" required>
+                <br>
+                <label for="mensagem">Mensagem</label>
+                <br>
+                <textarea name="Mensagem: " id="mensagem" placeholder="Digite seu feedback" required></textarea>
+                <br>
+                <button id="reset" type="reset">Limpar</button>
+                <button id="submit" type="submit">Enviar</button>
+            </section>
+        </form>
+        <section class="comentarios-area">
+            <h3>Comentários Recentes:</h3>
+            <div id="lista-comentarios"></div>
+        </section>
+    </main>
+    <footer>
+        <p>©️2026 Copyright: Luan Alison Camargo de Lima</p>
+    </footer>
+    <script>
+        const form = document.querySelector('form');
+        const listaComentarios = document.getElementById('lista-comentarios');
+
+        const comentariosIniciais = [
+            {
+                nome: "Gustavo Henrique Brusky",
+                mensagem: "Gostei do primeiro filme, espero o terceiro!"
+            },
+            {
+                nome: "Kid Bengala",
+                mensagem: "Espero que no segundo filme tenha mais sexo!"
+            },
+            {
+                nome: "Luiz Gustavo",
+                mensagem: "Espero que o Bruesky apareça no próximo filme, gostaria muito de ver o McQueen queimando a rodinha dele!😈😈😈"
+            }
+        ]
+
+        function adicionarComentariosNaTela(nomeDaPessoa, textoDaMensagem, colocarNoTopo) {
+            const novoComentario = document.createElement('div');
+
+            novoComentario.className = 'comentario-box';
+            novoComentario.innerHTML = `<strong>${nomeDaPessoa}</strong> comentou:<p>${textoDaMensagem}</p>`
+
+            if (colocarNoTopo === true) {
+                listaComentarios.prepend(novoComentario);
+            } else {
+                listaComentarios.appendChild(novoComentario);
+            }
+        }
+
+        comentariosIniciais.forEach(function (comentario) {
+            adicionarComentariosNaTela(comentario.nome, comentario.mensagem, false);
+        });
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            adicionarComentariosNaTela(nome, mensagem, true);
+
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>
