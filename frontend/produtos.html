@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="../frontend/style.css">
+    <script src="scriptProd/script.js" defer></script>
 </head>
 
 <body>
@@ -43,7 +44,7 @@
         <section class="imagemProduto">
             <h2 id="Sexo1"><strong>Sexo O Filme!</strong></h2>
             <div class="detalheProd mac11">
-                <img class="imgProd" src="assets/images.jpg" alt="Sexo O Filme!" title="Clique para ver um teaser!"
+                <img class="imgProd imgMac" src="assets/images.jpg" alt="Sexo O Filme!" title="Clique para ver um teaser!"
                     onclick="abrirTelaCheia('video1')" style="cursor: pointer;">
                 <video id="video1" src="assets/Flex Air 1-8 - ALL EPISODES - Neutrino Cat (360p, h264, youtube).mp4"
                     style="display: none;" controls></video>
@@ -75,7 +76,7 @@
             </div>
             <h2 id="Sexo2"><strong>Sexo 2: Em breve...</strong></h2>
             <div class="detalheProd mac22">
-                <img class="imgProd" src="assets/images (1).jpg" alt="Sexo 2: Em breve..."
+                <img class="imgProd imgMac2" src="assets/images (1).jpg" alt="Sexo 2: Em breve..."
                     title="Clique para ver um teaser!" onclick="abrirTelaCheia('video2')" style="cursor: pointer;">
                 <video id="video2" src="assets/Mcqueen-Sexo2.mp4" style="display: none;" controls></video>
                 <p class="histText">Após os eventos épicos que abalaram as estruturas do multiverso, o mundo acreditava
@@ -101,7 +102,7 @@
             </div>
             <h2 id="bombaNuclear"><strong>💥Bomba Nuclear💥</strong></h2>
             <div class="detalheProd bomb11">
-                <img class="imgProd" src="assets/bomba nuclear.jpg" alt="Bomba Nuclear"
+                <img class="imgProd imgBomb" src="assets/bomba nuclear.jpg" alt="Bomba Nuclear"
                     title="Clique para ver um teaser!" onclick="abrirTelaCheia('video3')" style="cursor: pointer;">
                 <video id="video3" src="assets/Teaser-BombaNuclear.mp4" style="display: none;" controls></video>
                 <p class="histText">A Solução Definitiva em Relevância Geopolítica e Dissuasão Estratégica:
@@ -131,30 +132,16 @@
                     A peça definitiva para quem não aceita menos do que a última palavra em segurança e projeção de
                     força.</p>
             </div>
+            <div class="never">
+                <button class="naoAperte" type="submit">Não aperte esse botão</button>
+            </div>
+            <div>
+                <video id="videoTroll" style="display: none;"></video>
         </section>
     </main>
     <footer>
         <p>©️2026 Copyright: Luan Alison Camargo de Lima</p>
     </footer>
-    <script>
-        function abrirTelaCheia(idVideo) {
-            var video = document.getElementById(idVideo);
-            video.style.display = "block";
-
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            }
-
-            video.play();
-
-            video.onfullscreenchange = function () {
-                if (!document.fullscreenElement) {
-                    video.style.display = "none";
-                    video.pause();
-                }
-            }
-        }
-    </script>
 </body>
 
 </html>
