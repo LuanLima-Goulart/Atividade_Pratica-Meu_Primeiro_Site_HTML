@@ -1,7 +1,8 @@
 body {
     margin: 20px;
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--cor-texto);
+    transition: background-color 3s ease, color 3s ease;
 }
 
 textarea {
@@ -22,7 +23,8 @@ textarea {
 }
 
 .nomeSite {
-    color: white;
+    color: var(--cor-texto);
+    transition: color 1s ease;
 }
 
 .nomeSite:hover {
@@ -36,7 +38,8 @@ textarea {
 }
 
 .abas2 {
-    color: white;
+    color: var(--cor-texto);
+    transition: color 1s ease;
 }
 
 .abas2:hover {
@@ -82,14 +85,17 @@ textarea {
 
 .mac:hover {
     transform: scale(1.15);
+    transition: transform 0.5s ease;
 }
 
 .mac2:hover {
     transform: scale(1.15);
+    transition: transform 0.5s ease;
 }
 
 .bomb:hover {
     transform: scale(1.15);
+    transition: transform 0.5s ease;
 }
 
 .imagemProduto {
@@ -213,9 +219,37 @@ html {
     height: 100vh;
     z-index: 9999;
     object-fit: cover;
-    background-color: black;
+    background-color: #000000;
 }
 
 .sem-cursor {
     cursor: none !important;
+}
+
+:root {
+    --bg-color: black;
+    --cor-texto: white;
+}
+
+[data-theme='light'] {
+    --bg-color: #fff;
+    --cor-texto: #000;
+}
+
+#imagem-temaClaro {
+    width: 100px;
+    height: 100px;
+}
+
+#tema-claro {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#tema-claro:hover {
+    transform: scale(33.0);
+    transition: transform 120s ease;
 }
